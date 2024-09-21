@@ -159,9 +159,9 @@ System.out.println( "Test 04 END");
         // Print the formatted date
         System.out.println(formattedDate);
 
-      
+
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-WebElement DateSelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@jsname='YPqjbf'])[2]")));
+        WebElement DateSelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@jsname='YPqjbf'])[2]")));
 
 Thread.sleep(2000);
 DateSelect.sendKeys(formattedDate);
@@ -214,17 +214,17 @@ DateSelect.sendKeys(formattedDate);
 
 DateSelect.sendKeys(Keys.TAB,Keys.TAB);
 WebElement hoursInput = driver.switchTo().activeElement();
-hoursInput.sendKeys(hours);
+hoursInput.sendKeys("07");
 hoursInput.sendKeys(Keys.TAB);
 WebElement minutesInput = driver.switchTo().activeElement();
 Thread.sleep(1000);
-minutesInput.sendKeys(minutes);
+minutesInput.sendKeys("30");
 minutesInput.sendKeys(Keys.TAB);
 WebElement ampm = driver.switchTo().activeElement();
 //ampm.click();
 
 
-Thread.sleep(5000);
+//Thread.sleep(5000);
 
 WebElement submitBtw= driver.findElement(By.xpath("//span[text()='Submit']"));
 submitBtw.click();
